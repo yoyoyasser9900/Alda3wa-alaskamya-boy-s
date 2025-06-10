@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  direction: rtl;
+}
+.header {
+  background: #3f51b5;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+.menu-btn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -200px;
+  width: 200px;
+  height: 100%;
+  background: #444;
+  color: white;
+  transition: right 0.3s ease;
+  padding-top: 60px;
+}
+.sidebar.active {
+  right: 0;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  padding: 15px;
+  cursor: pointer;
+}
+.sidebar ul li:hover {
+  background: #666;
+}
+.main {
+  padding: 20px;
+}
+.section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}

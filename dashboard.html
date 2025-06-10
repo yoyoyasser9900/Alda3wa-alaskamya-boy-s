@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>الصفحة الرئيسية</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <script>
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('active');
+    }
+
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(sec => sec.style.display = 'none');
+      document.getElementById(sectionId).style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <span class="menu-btn" onclick="toggleSidebar()">☰</span>
+    <h1>مرحبا بكم في موقع مدرسة الدعوة الإسلامية بنين</h1>
+  </div>
+  <div class="sidebar">
+    <ul>
+      <li onclick="showSection('student-services')">خدمات الطالب</li>
+      <li onclick="showSection('evaluation')">التقييم</li>
+    </ul>
+  </div>
+  <div class="main">
+    <div id="student-services" class="section">
+      <h2>خدمات الطالب</h2>
+      <ul>
+        <li>مواد دراسية</li>
+        <li>مكتبة</li>
+        <li>حصص افتراضية</li>
+        <li>فصول افتراضية</li>
+        <li>المهام الفردية</li>
+        <li>الواجب المنزلي</li>
+        <li>المناهج</li>
+        <li>العروض المسجلة</li>
+      </ul>
+    </div>
+    <div id="evaluation" class="section" style="display:none;">
+      <h2>التقييم</h2>
+      <ul>
+        <li>رقم الجلوس</li>
+        <li>التقرير الأسبوعي</li>
+        <li>المتابعة المدرسية</li>
+        <li>متابعة سلوك</li>
+        <li>حضور وغياب</li>
+        <li>الاختبارات</li>
+        <li onclick="showSection('grades')">درجات الطالب</li>
+      </ul>
+    </div>
+    <div id="grades" class="section" style="display:none;">
+      <h2>درجات الطالب</h2>
+      <table border="1" style="width:100%; text-align:center;">
+        <tr><th>المادة</th><th>الدرجة</th></tr>
+        <tr><td>عربي</td><td>--</td></tr>
+        <tr><td>رياضيات</td><td>--</td></tr>
+        <tr><td>إنجليزي</td><td>--</td></tr>
+        <tr><td>علوم متكاملة</td><td>--</td></tr>
+        <tr><td>فلسفة</td><td>--</td></tr>
+        <tr><td>تاريخ</td><td>--</td></tr>
+        <tr><th>مجموع الطالب</th><th>--</th></tr>
+        <tr><th colspan="2">مواد لا تضاف للمجموع</th></tr>
+        <tr><td>دين</td><td>--</td></tr>
+        <tr><td>قرآن</td><td>--</td></tr>
+        <tr><td>تربية وطنية</td><td>--</td></tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
